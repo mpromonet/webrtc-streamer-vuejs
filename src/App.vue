@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <WebRtcStreamer 
+        webrtcstream="rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"
+        webrtcurl="http://webrtc-streamer.herokuapp.com/" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WebRtcStreamer from './components/WebRtcStreamer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    WebRtcStreamer
   }
 }
 </script>
