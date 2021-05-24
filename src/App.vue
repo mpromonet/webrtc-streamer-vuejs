@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       webrtcstream: 'rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov',
-      webrtcurl: 'http://webrtc-streamer.herokuapp.com/'
+      webrtcurl: '//webrtc-streamer.herokuapp.com/'
     };
   }  
 }
