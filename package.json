@@ -9,7 +9,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "webrtc-streamer": "^0.2.8-6-g6ecd8f6"
+    "webrtc-streamer": "^0.6.3-18-g9ad49c2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.4",
