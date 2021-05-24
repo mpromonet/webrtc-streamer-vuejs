@@ -15,5 +15,6 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Live Demo
+
+[Demo](https://webrtc-streamer-vuejs.pages.dev)
