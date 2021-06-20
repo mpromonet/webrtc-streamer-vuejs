@@ -1,19 +1,36 @@
 <template>
   <div id="app">
-    <input v-model="webrtcstream" size="64"><br>
     <input v-model="webrtcurl"   size="64">
+    <v-select v-model="webrtcstream" :options="medialist" >  
+    </v-select><br>  
     <webrtc-streamer :url="webrtcstream" :webrtcurl="webrtcurl" muted></webrtc-streamer>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: 'App', 
   data() {
     return {
-      webrtcstream: 'rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov',
-      webrtcurl: '//webrtc-streamer.herokuapp.com/'
+      webrtcstream: '',
+      webrtcurl: '//webrtc-streamer.herokuapp.com',
+      medialist: []
     };
+  },
+  mounted() {
+    this.getMediaList()
+  },
+  methods: {
+    getMediaList: function() {
+      const medialisturl = this.webrtcurl + "/api/getMediaList"
+      fetch(medialisturl)
+        .then(response => response.json())
+        .then(data => {
+          this.medialist = data.map( media => media.video )
+          this.webrtcstream = this.medialist[0] 
+        }) 
+        .catch(err => console.log(err))     
+    }
   }  
 }
 </script>
