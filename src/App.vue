@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <input v-model="webrtcurl"   size="64">
+    <input v-model="webrtcurl"   size="64" v-on:change="getMediaList" >
     <v-select v-model="webrtcstream" :options="medialist" >  
     </v-select><br>  
     <webrtc-streamer :url="webrtcstream" :webrtcurl="webrtcurl" muted></webrtc-streamer>
+    <webrtc-streamer-footer :webrtcurl="webrtcurl"></webrtc-streamer-footer>
   </div>
 </template>
 

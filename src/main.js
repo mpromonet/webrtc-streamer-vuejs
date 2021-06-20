@@ -8,7 +8,8 @@ Vue.component('v-select', vSelect)
 Vue.config.productionTip = false
 
 Vue.config.ignoredElements = [
-  'webrtc-streamer'
+  'webrtc-streamer',
+  'webrtc-streamer-footer'
 ]
 
 new Vue({
