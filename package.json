@@ -3,23 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "ncp node_modules/webrtc-streamer/html public/html && vue-cli-service serve",
-    "build": "ncp node_modules/webrtc-streamer/html public/html && vue-cli-service build"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-select": "^3.11.2",
-    "webrtc-streamer": "^0.6.3-18-g9ad49c2"
+    "vuetify": "^2.4.0",
+    "webrtc-streamer": "^0.6.4-7-gbce6923"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.4.4",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
     "ncp": "^2.0.0",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
+  }
 }

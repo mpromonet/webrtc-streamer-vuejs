@@ -1,10 +1,13 @@
 <template>
   <div id="app">
-    <input v-model="webrtcurl"   size="64" v-on:change="getMediaList" >
-    <v-select v-model="webrtcstream" :options="medialist" >  
-    </v-select><br>  
-    <webrtc-streamer :url="webrtcstream" :webrtcurl="webrtcurl" muted></webrtc-streamer>
-    <webrtc-streamer-footer :webrtcurl="webrtcurl"></webrtc-streamer-footer>
+    <v-app>
+      <v-combobox v-model="webrtcurl" :items="webrtcurllist" v-on:change="getMediaList" size="64">  
+      </v-combobox>
+      <v-combobox v-model="webrtcstream" :items="medialist" >  
+      </v-combobox>  
+      <webrtc-streamer :url="webrtcstream" :webrtcurl="webrtcurl" muted></webrtc-streamer>
+      <webrtc-streamer-footer :webrtcurl="webrtcurl"></webrtc-streamer-footer>
+    </v-app>
   </div>
 </template>
 
@@ -14,7 +17,8 @@ export default {
   data() {
     return {
       webrtcstream: '',
-      webrtcurl: '//webrtc-streamer.herokuapp.com',
+      webrtcurl: 'https://webrtc-streamer.herokuapp.com',
+      webrtcurllist: ['https://webrtc-streamer.herokuapp.com', 'https://beechmont.cameras.puppywood.com'],
       medialist: []
     };
   },
