@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <v-app>
-      <v-combobox v-model="webrtcurl" :items="webrtcurllist" v-on:change="getMediaList" size="64">  
-      </v-combobox>
-      <v-combobox v-model="webrtcstream" :items="medialist" >  
-      </v-combobox>  
+      <v-container>
+        <v-combobox v-model="webrtcurl" :items="webrtcurllist" v-on:change="getMediaList" size="64" single-line small-chips>  
+        </v-combobox>
+        <v-combobox v-model="webrtcstream" :items="medialist" single-line small-chips center>  
+        </v-combobox>  
+      </v-container>
       <webrtc-streamer :url="webrtcstream" :webrtcurl="webrtcurl" muted></webrtc-streamer>
       <webrtc-streamer-footer :webrtcurl="webrtcurl"></webrtc-streamer-footer>
     </v-app>
