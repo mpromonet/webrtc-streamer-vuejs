@@ -1,7 +1,7 @@
 import Vue from 'vue'
+import Vuetify from 'vuetify/lib/framework';
 import App from './App.vue'
 import "vuetify/dist/vuetify.css";
-import vuetify from './plugins/vuetify';
 import "webrtc-streamer/html/webrtc-streamer-element";
 import "webrtc-streamer/html/webrtc-streamer-footer-element";
 
@@ -11,7 +11,9 @@ Vue.config.ignoredElements = [
   'webrtc-streamer-footer'
 ]
 
+Vue.use(Vuetify);
+
 new Vue({
-  vuetify,
+  vuetify: new Vuetify({}),
   render: h => h(App)
 }).$mount('#app')
