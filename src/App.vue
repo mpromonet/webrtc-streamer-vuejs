@@ -7,7 +7,7 @@
         <v-combobox v-model="webrtcstream" :items="medialist" single-line small-chips center>  
         </v-combobox>  
       </v-container>
-      <webrtc-streamer :url="webrtcstream" :webrtcurl="webrtcurl" muted></webrtc-streamer>
+      <webrtc-streamer :url="webrtcstream" :webrtcurl="webrtcurl" muted width="50%" height="50%"></webrtc-streamer>
       <webrtc-streamer-footer :webrtcurl="webrtcurl"></webrtc-streamer-footer>
     </v-app>
   </div>
