@@ -10,7 +10,7 @@
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vuetify": "^2.4.0",
-    "webrtc-streamer": "^0.6.4-19-gfa32dbf"
+    "webrtc-streamer": "^0.6.4-21-g6c5af24"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
