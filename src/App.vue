@@ -20,7 +20,7 @@ export default {
     return {
       webrtcstream: '',
       webrtcurl: 'https://webrtc-streamer.herokuapp.com',
-      webrtcurllist: ['https://webrtc-streamer.herokuapp.com', 'https://beechmont.cameras.puppywood.com', 'https://montgomery.cameras.puppywood.com'],
+      webrtcurllist: ['https://webrtc-streamer-mpromonet.cloud.okteto.net', 'https://beechmont.cameras.puppywood.com', 'https://montgomery.cameras.puppywood.com', 'http://swimming-pool.ulstu.ru', 'http://webrtcstreamer.agreeabletree-365b9a90.canadacentral.azurecontainerapps.io' ],
       medialist: []
     };
   },
