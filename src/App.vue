@@ -19,8 +19,8 @@ export default {
   data() {
     return {
       webrtcstream: '',
-      webrtcurl: 'https://webrtc-streamer.herokuapp.com',
-      webrtcurllist: ['https://webrtc-streamer-mpromonet.cloud.okteto.net', 'https://beechmont.cameras.puppywood.com', 'https://montgomery.cameras.puppywood.com', 'https://swimming-pool.ulstu.ru', 'https://webrtcstreamer.agreeabletree-365b9a90.canadacentral.azurecontainerapps.io', 'http://60.251.240.92:8554/' ],
+      webrtcurl: 'https://webrtcstreamer.agreeabletree-365b9a90.canadacentral.azurecontainerapps.io',
+      webrtcurllist: ['https://webrtcstreamer.agreeabletree-365b9a90.canadacentral.azurecontainerapps.io', 'https://webrtc-streamer-mpromonet.cloud.okteto.net', 'https://beechmont.cameras.puppywood.com', 'https://montgomery.cameras.puppywood.com', 'https://swimming-pool.ulstu.ru', 'http://60.251.240.92:8554/' ],
       medialist: []
     };
   },
@@ -29,6 +29,8 @@ export default {
   },
   methods: {
     getMediaList: function() {
+      this.medialist = [];
+      this.webrtcstream = '';
       const medialisturl = this.webrtcurl + "/api/getMediaList"
       fetch(medialisturl)
         .then(response => response.json())
