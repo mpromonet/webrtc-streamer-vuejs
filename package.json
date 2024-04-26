@@ -7,7 +7,6 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
     "vue": "^3.4.25",
     "vuetify": "^3.5.17",
     "webrtc-streamer": "^0.8.5-20-g933efa9"
