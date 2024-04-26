@@ -1,19 +1,21 @@
-import Vue from 'vue'
-import Vuetify from 'vuetify/lib/framework';
-import App from './App.vue'
-import "vuetify/dist/vuetify.css";
+import { createApp } from 'vue';
+import { createVuetify } from 'vuetify';
+import App from './App.vue';
+
+import 'vuetify/styles';
+import '@mdi/font/css/materialdesignicons.css';
+
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
 import "webrtc-streamer/html/webrtc-streamer-element";
 import "webrtc-streamer/html/webrtc-streamer-footer-element";
 
-Vue.config.productionTip = false
-Vue.config.ignoredElements = [
-  'webrtc-streamer',
-  'webrtc-streamer-footer'
-]
+const app = createApp(App);
 
-Vue.use(Vuetify);
+const vuetify = createVuetify({ components, directives});
 
-new Vue({
-  vuetify: new Vuetify({}),
-  render: h => h(App)
-}).$mount('#app')
+app
+  .use(vuetify)
+  .mount('#app')
+

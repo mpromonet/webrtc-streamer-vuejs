@@ -1,16 +1,14 @@
 <template>
-  <div id="app">
     <v-app>
-      <v-container>
+      <v-main>
         <v-combobox v-model="webrtcurl" :items="webrtcurllist" v-on:change="getMediaList" size="64" single-line small-chips>  
         </v-combobox>
         <v-combobox v-model="webrtcstream" :items="medialist" single-line small-chips center>  
         </v-combobox>  
-      </v-container>
+      </v-main>
       <webrtc-streamer :url="webrtcstream" :webrtcurl="webrtcurl" muted width="50%" height="50%" options="rtptransport=tcp&timeout=60"></webrtc-streamer>
       <webrtc-streamer-footer :webrtcurl="webrtcurl"></webrtc-streamer-footer>
     </v-app>
-  </div>
 </template>
 
 <script>
@@ -20,7 +18,7 @@ export default {
     return {
       webrtcstream: '',
       webrtcurl: 'https://webrtcstreamer.agreeabletree-365b9a90.canadacentral.azurecontainerapps.io',
-      webrtcurllist: ['https://webrtcstreamer.agreeabletree-365b9a90.canadacentral.azurecontainerapps.io', 'https://beechmont.cameras.puppywood.com', 'https://montgomery.cameras.puppywood.com', 'https://swimming-pool.ulstu.ru', 'http://60.251.240.92:8554/', 'http://wjqcy4.anjieservice.com:8000/' ],
+      webrtcurllist: ['https://webrtcstreamer.agreeabletree-365b9a90.canadacentral.azurecontainerapps.io', 'https://beechmont.cameras.puppywood.com', 'https://montgomery.cameras.puppywood.com', 'https://swimming-pool.ulstu.ru', 'http://60.251.240.92:8554', 'http://wjqcy4.anjieservice.com:8000' ],
       medialist: []
     };
   },
@@ -43,4 +41,3 @@ export default {
   }  
 }
 </script>
-
