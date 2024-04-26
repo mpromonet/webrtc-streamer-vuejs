@@ -1,7 +1,7 @@
 <template>
     <v-app>
       <v-main>
-        <v-combobox v-model="webrtcurl" :items="webrtcurllist" v-on:change="getMediaList" size="64" single-line small-chips>  
+        <v-combobox v-model="webrtcurl" :items="webrtcurllist" @update:modelValue="getMediaList" size="64" single-line small-chips>  
         </v-combobox>
         <v-combobox v-model="webrtcstream" :items="medialist" single-line small-chips center>  
         </v-combobox>  
@@ -27,8 +27,8 @@ export default {
   },
   methods: {
     getMediaList: function() {
-      this.medialist = [];
       this.webrtcstream = '';
+      this.medialist = [];
       const medialisturl = this.webrtcurl + "/api/getMediaList"
       fetch(medialisturl)
         .then(response => response.json())
